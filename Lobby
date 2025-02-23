@@ -1,0 +1,26 @@
+local targetPlaceID = 104962744840212
+
+if game.PlaceId == targetPlaceID then
+local NotificationLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/wiPVTwLB"))()
+
+NotificationLibrary:SendNotification("Info", "Made by LightGray2", 0.50)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local Window = Library:NewWindow("Epik Black parkour")
+local Section = Window:NewSection("by LightGray2")
+
+Section:CreateButton("Badge!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2359.814453125, -1.5618772506713867, -0.06061391532421112)
+wait(0.3)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2690.320556640625, -110.8064193725586, -0.9362983703613281)
+task.wait(4)
+game:Shutdown()
+end)
+
+else
+local TeleportService = game:GetService("TeleportService")
+local gameId = 104962744840212
+
+TeleportService:Teleport(gameId, game.Players.LocalPlayer)
+end
