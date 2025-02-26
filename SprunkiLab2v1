@@ -1,0 +1,88 @@
+-->/SprunkiLab / Chapter: TWO // Author: LightGray2/<--
+local targetPlaceID = 133310901924179
+
+if game.PlaceId == targetPlaceID then
+    local NotificationLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/wiPVTwLB"))()
+
+NotificationLibrary:SendNotification("Info", "Made by LightGray2", 0.50)
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local Window = Library:NewWindow("SprunkiLab")
+local Section = Window:NewSection("Chapter 2")
+
+Section:CreateButton("Badge!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(51.05490493774414, 217.99998474121094, 183.5113983154297)
+end)
+else
+    local Notification = loadstring(game:HttpGet("https://pastefy.app/L5vZRsaI/raw"))()
+local NotificationHolder = loadstring(game:HttpGet("https://pastefy.app/WTE7ewh0/raw"))()
+
+local clicked = false
+local timeLimit = 5
+
+local notif = Notification:Notify(
+    {Title = "Alert", Description = "Do you want to proceed and join “SpruniLab | Chapter 2”?"},
+    {OutlineColor = Color3.fromRGB(80, 80, 80), Time = timeLimit, Type = "option"},
+    {
+        Image = "http://www.roblox.com/asset/?id=6023426923", 
+        ImageColor = Color3.fromRGB(255, 84, 84), 
+        Callback = function(State) 
+            clicked = true
+            
+            if notif and notif.Dismiss then
+                notif:Dismiss()
+            end
+
+            if State then
+                Notification:Notify(
+                    {Title = "Hey! Remember this", Description = "Execute this script again!"},
+                    {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 99, Type = "image"},
+                    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+                )
+
+                local startTime = tick()
+                local success, err = pcall(function()
+                    local TeleportService = game:GetService("TeleportService")
+local gameId = 133310901924179
+
+TeleportService:Teleport(gameId, game.Players.LocalPlayer)
+                end)
+                local endTime = tick()
+
+                local loadTime = string.format("%.2f", endTime - startTime)
+
+                if success then
+                    Notification:Notify(
+                        {Title = "Joined [SprunkiLab Chapter 2]", Description = "Time loaded in " .. loadTime .. " seconds"},
+                        {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 99, Type = "image"},
+                        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+                    )
+                else
+                    Notification:Notify(
+                        {Title = "Joining failed", Description = "Error: " .. tostring(err)},
+                        {OutlineColor = Color3.fromRGB(255, 0, 0), Time = 5, Type = "image"},
+                        {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+                    )
+                end
+            else
+                Notification:Notify(
+                    {Title = "[( Cancelled )]", Description = "Not attempting to execute.."},
+                    {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 0.50, Type = "image"},
+                    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+                )
+            end
+        end
+    }
+)
+
+task.delay(timeLimit, function()
+    if not clicked then
+        Notification:Notify(
+            {Title = "[( Ignore )]", Description = "You did not respond in time."},
+            {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 3, Type = "image"},
+            {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
+        )
+    end
+end)
+end
