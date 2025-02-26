@@ -1,1 +1,2 @@
-This is badges game giver! Developer: LightGray2
+### Made by LightGray2
+</>Absolutely a badge giver of the YashuYahYeet </>
